@@ -1,13 +1,13 @@
 FROM node:boron
 
-MAINTAINER Ivan Font <ifont@redhat.com>
+LABEL K Hargreaves
 
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Clone game source code
-RUN git clone https://github.com/font/pacman.git .
+RUN git clone https://github.com/wedge22/pacman.git .
 
 # Install app dependencies
 RUN npm install
