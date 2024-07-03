@@ -1,6 +1,6 @@
 FROM node:latest
 
-LABEL K Hargreaves
+LABEL maintainer="K Hargreaves"
 
 # Create app directory
 RUN mkdir -p /usr/src/app
