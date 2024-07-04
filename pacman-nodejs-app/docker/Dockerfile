@@ -1,9 +1,8 @@
-FROM node:latest
+FROM node:14
 
 LABEL maintainer="K Hargreaves"
 
 # Create app directory
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Clone game source code
@@ -12,11 +11,9 @@ RUN git clone https://github.com/wedge22/pacman.git .
 # Install app dependencies
 RUN npm install
 
-# Install OpenTelemetry dependencies
-RUN npm install @opentelemetry/api
-
-# Expose port 8080
-EXPOSE 8080
+# Use the PORT environment variable or default to 8080
+ENV PORT=8080
+EXPOSE $PORT
 
 # Run container
 CMD ["npm", "start"]
