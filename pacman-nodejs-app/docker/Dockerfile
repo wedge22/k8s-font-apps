@@ -13,7 +13,7 @@ RUN git clone https://github.com/wedge22/pacman.git .
 RUN npm install
 
 # Install OpenTelemetry dependencies
-RUN npm install @opentelemetry/api @opentelemetry/sdk-node @opentelemetry/auto-instrumentations-node @opentelemetry/exporter-otlp-grpc
+RUN npm install @opentelemetry/api
 
 # Expose port 8080
 EXPOSE 8080
